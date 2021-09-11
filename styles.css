@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-family: 'Public Sans', sans-serif;
+    --button-color: linear-gradient(344deg, rgba(63, 194, 251, 1) 0%, rgba(72, 212, 115, 1) 97%);
+    --footer-background: #2D314D;
+    --nav-links: #9597A5;
+    --hero-background: #f2f2f2;
+    --selection-cards-bg: #f4f5f7;
+
+}
+
+main {
+    max-width: 1800px;
+    margin: 0 auto;
+}
+
+.nav__container {
+    display: flex;
+    padding: 20px 50px;
+    justify-content: space-between;
+    position: relative;
+}
+
+
+
+.nav__link {
+    text-decoration: none;
+    color: var(--nav-links);
+    margin-left: 15px;
+
+}
+
+.nav__link:hover {
+    color: var(--footer-background);
+    transition: 0.2s ease-in-out;
+}
+
+.nav__button {
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    background: var(--button-color);
+    border-radius: 20px;
+}
+
+.nav__button:hover {
+    background: linear-gradient(344deg, rgba(63, 118, 251, 1) 0%, rgba(72, 212, 115, 1) 97%);
+    transition: 0.2s ease-in-out;
+}
+
+
+@media (max-width: 800px ) {
+    .nav__container {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        background: linear-gradient(344deg, rgba(63, 195, 251, 0.692) 0%, rgba(8, 216, 70, 0.226) 97%);
+        text-align: left;
+        left: -80rem;
+        padding-top: 80px;
+        transition: 0.3s ease-in-out;
+    
+     
+    
+    }
+    .nav__button {
+        display: none;
+    }
+
+    .nav__container {
+        flex-direction: column;
+        justify-content: flex-start;
+
+    }
+
+    .nav__links--container {
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+}
+
+.nav__link {
+    margin-top: 15px;
+}
+
+.hamburger__menu {
+    width: 3rem;
+    height: 3rem;
+    position: fixed;
+    top: 2rem;
+    right: 3rem;
+    cursor: pointer;
+    background-color: rgba(10, 10, 10, 0.705);
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 10px;
+    -webkit-box-shadow: -1px 4px 15px -1px #000000; 
+box-shadow: -1px 4px 15px -1px #000000;
+
+}
+
+.line {
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    border-radius: 4px;
+}
+
+.clicked {
+    left: 0rem;
+    
+}
+
+.nav__link {
+    color: black;
+}
+
+.nav__link:hover {
+    color: rgb(0, 128, 32)
+}
+
+
+}
+
+
