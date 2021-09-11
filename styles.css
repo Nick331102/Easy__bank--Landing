@@ -65,19 +65,17 @@ main {
         left: -80rem;
         padding-top: 80px;
         transition: 0.3s ease-in-out;
-    
-     
-    
-    }
-    .nav__button {
-        display: none;
-    }
-
-    .nav__container {
         flex-direction: column;
         justify-content: flex-start;
 
     }
+
+
+    .nav__button {
+        display: none;
+    }
+
+   
 
     .nav__links--container {
         display: flex;
@@ -108,7 +106,7 @@ box-shadow: -1px 4px 15px -1px #000000;
 }
 
 .line {
-    width: 100%;
+    width: 90%;
     height: 2px;
     background-color: white;
     border-radius: 4px;
@@ -121,10 +119,61 @@ box-shadow: -1px 4px 15px -1px #000000;
 
 .nav__link {
     color: black;
+    font-size: 1.1rem;
 }
 
 .nav__link:hover {
-    color: rgb(0, 128, 32)
+    color: rgb(118, 134, 122);
+    transition: 0.2s ease-in-out;
+}
+
+/* hamburger Lines */
+
+.clicked .line-1 {
+    transform: rotateZ(-45deg) translate(-0.42rem, 0.48rem);
+}
+
+.clicked .line-2 {
+    opacity: 0;
+}
+
+.clicked .line-3 {
+    transform: rotateZ(45deg) translate(-0.3rem, -0.45rem);
+}
+
+/* nav links */
+
+.nav__links--container a {
+    opacity: 1;
+}
+/* dynamic links fade class */
+
+.nav__links--container a.fade {
+    opacity: 1
+
+}
+
+
+
+.nav__links--container a:nth-child(1) {
+    transition: all 0.5s ease-in-out 0.2s;
+    
+}
+.nav__links--container a:nth-child(2) {
+    transition: all 0.5s ease-in-out 0.4s;
+    
+}
+.nav__links--container a:nth-child(3) {
+    transition: all 0.5s ease-in-out 0.6s;
+    
+}
+.nav__links--container a:nth-child(4) {
+    transition: all 0.5s ease-in-out 0.8s;
+    
+}
+.nav__links--container a:nth-child(5) {
+    transition: all 0.5s ease-in-out 1.0s;
+    
 }
 
 
