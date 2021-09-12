@@ -22,8 +22,10 @@ main {
 .nav__container {
     display: flex;
     padding: 20px 50px;
-    justify-content: space-between;
+    justify-content: space-evenly;
     position: relative;
+    margin-left: 70px;
+
 }
 
 
@@ -54,6 +56,83 @@ main {
 }
 
 
+
+/* Hero Section */
+.hero {
+    display: grid;
+    grid-template-columns: 40% 60%;
+
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: hidden;
+
+}
+
+.hero__text--container {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin-left: 6rem;
+}
+
+.hero__headline {
+    font-size: clamp(1.8rem, 2.5vw, 4rem);
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.hero__description {
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.hero__section--button {
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    background: var(--button-color);
+    border-radius: 20px;
+    width: 180px;
+    text-align: center
+}
+
+.hero__section--button:hover {
+    background: linear-gradient(344deg, rgba(63, 118, 251, 1) 0%, rgba(72, 212, 115, 1) 97%);
+    transition: 0.2s ease-in-out;
+}
+
+
+
+.mockups {
+    background: url('/images/bg-intro-desktop.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: 50px;
+    background-position-y: -80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mockups img {
+    width: 85%;
+    transform: translate(140px, -50px);
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Responsive Nav */
+
 @media (max-width: 800px) {
 
     .nav__container {
@@ -68,13 +147,14 @@ main {
         position: fixed;
         top: 60px;
         ;
-        background: linear-gradient(344deg, rgba(63, 195, 251, 0.692) 0%, rgba(8, 216, 70, 0.226) 97%);
+        background: grey;
         text-align: center;
         left: -80rem;
         padding-top: 50px;
         transition: 0.3s ease-in-out;
         flex-direction: column;
         justify-content: flex-start;
+        z-index: 10;
 
 
 
