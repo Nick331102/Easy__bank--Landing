@@ -1,14 +1,11 @@
 const menu = document.querySelector("#toggle")
-const nav = document.querySelector(".nav__container")
-const navLinks = document.querySelector(".nav__link")
+const nav = document.querySelector(".nav__links--container")
+const lines = document.querySelector(".line")
+
 
 menu.addEventListener("click", () => {
     nav.classList.toggle("clicked")
-    navLinks.forEach((link) => {
-        link.classList.toggle("fade")
-
-    })
-
+    lines.classList.toggle("clicked")
 })
 
 

@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
 }
 
 :root {
@@ -115,7 +116,7 @@ main {
 
 
 .mockups {
-    background: url('/images/bg-intro-desktop.svg');
+    background: url('images/bg-intro-desktop.svg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position-x: 50px;
@@ -133,13 +134,16 @@ main {
 /* Choose Section *************/
 .choose {
 
-    padding: 30px 0 50px 100px;
-    background: var(--selection-cards-bg)
+    
+    background: var(--selection-cards-bg);
+    padding: 30px;
+   
 }
 
 
-div.choose__description--container {
+.choose__description--container {
     max-width: 550px;
+   
 
 }
 
@@ -157,19 +161,22 @@ div.choose__description--container {
 }
 
 .choose__card--container {
-    margin-top: 40px;
-    display: flex;
-
-    gap: 30px;
-    width: 90%;
-
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-gap: 20px;
+    align-items: stretch;
+    margin-top: 50px;
+ 
 }
 
+  
 
 .choose__card--image {
     margin-bottom: 20px;
-
+   
 }
+
+
 
 .choose__card--headline {
     margin-bottom: 20px;
@@ -185,32 +192,27 @@ div.choose__description--container {
 /* Articles Section ***********/
 
 .articles {
-    padding: 50px;
-
-
+    padding: 30px;
 }
 
 .articles__container {
-    display: flex;
-
-    max-width: 89%;
-    gap: 30px;
-    margin-top: 20px;
-
-}
-
-
-.article-card {
-    max-width: 500px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-gap: 20px;
+    align-items: stretch;
+	justify-content: center;
 }
 
 .article__card img {
     width: 100%;
-    height: 200px;
     object-fit: cover;
-    margin-bottom: 30px;
-    border-radius: 10px;
+    height: 200px;
 }
+
+
+
+
+
 
 .articles__headline {
     font-size: clamp(1.5rem, 2vw, 3rem);
@@ -245,6 +247,7 @@ div.choose__description--container {
     display: flex;
     justify-content: space-evenly;
 }
+   
 
 .footer__links--1,
 .footer__links--2 {
@@ -322,40 +325,45 @@ div.choose__description--container {
 
 
 
-
 /* Responsive Nav */
 
 @media (max-width: 830px) {
 
     .nav__container {
         margin-top: 10px;
-        justify-content: center;
+        justify-content: flex-start;
+        padding-left: 0;
+       
 
     }
 
     .nav__links--container {
-        width: 60%;
-
+        min-width: 200px;
+        top: -30px;
+        left: 0;
+        bottom: 0;
+        height: 130%;
         padding: 30px;
-        position: absolute;
-        background: rgb(128, 128, 128);
+        position: fixed;
+        background: linear-gradient(344deg, rgba(63, 118, 251, 1) 0%, rgba(72, 212, 115, 1) 97%);
         text-align: center;
-
-
-        top: 2rem;
-        padding-top: 20px;
         transition: 0.3s ease-in-out;
         flex-direction: column;
         justify-content: flex-start;
         z-index: 10;
         display: flex;
-        transform: translatey(-140%);
         border-radius: 5px;
+        transform: translatex(-150%);
+        -webkit-box-shadow: 0px 6px 15px -2px #000000; 
+box-shadow: 0px 6px 15px -2px #000000;
+
+        
+
     }
 
     .clicked {
-        transform: translatey(10%);
-
+        transform: translatex(0);
+        
     }
 
     .nav__button {
@@ -377,11 +385,11 @@ div.choose__description--container {
     .hamburger__menu {
         width: 2.5rem;
         height: 2.5rem;
-        position: absolute;
-        top: .3rem;
-        right: 3rem;
+        position: fixed;
+        top: .7rem;
+        right: 1rem;
         cursor: pointer;
-        background-color: rgba(119, 136, 153, 0.678);
+        background: linear-gradient(344deg, rgba(63, 118, 251, 1) 0%, rgba(72, 212, 115, 1) 97%);
         border-radius: 50%;
         display: flex;
         flex-direction: column;
@@ -401,19 +409,18 @@ div.choose__description--container {
     }
 
 
-
-
-
     .nav__link {
         color: black;
         font-size: 1.1rem;
     }
 
     .nav__link:hover {
-        color: rgb(15, 131, 44);
+        color: rgb(255, 255, 255);
+        transition: 0.2s ease-in-out;
 
     }
 
+   
     /* hamburger Lines */
 
     .clicked .line-1 {
@@ -434,38 +441,10 @@ div.choose__description--container {
         opacity: 1;
     }
 
-    /* dynamic links fade class */
+    
 
-    .nav__links--container a.fade {
-        opacity: 1
-    }
-
-
-
-    .nav__links--container a:nth-child(1) {
-        transition: all 0.5s ease-in-out 0.2s;
-
-    }
-
-    .nav__links--container a:nth-child(2) {
-        transition: all 0.5s ease-in-out 0.4s;
-
-    }
-
-    .nav__links--container a:nth-child(3) {
-        transition: all 0.5s ease-in-out 0.6s;
-
-    }
-
-    .nav__links--container a:nth-child(4) {
-        transition: all 0.5s ease-in-out 0.8s;
-
-    }
-
-    .nav__links--container a:nth-child(5) {
-        transition: all 0.5s ease-in-out 1.0s;
-
-    }
+    
+    
 
 
 }
@@ -483,7 +462,7 @@ div.choose__description--container {
     }
 
     .mockups {
-        background: url('/images/bg-intro-mobile.svg');
+        background: url('images/bg-intro-mobile.svg');
         background-repeat: no-repeat;
         background-size: cover;
         background-position-x: 0px;
@@ -508,29 +487,21 @@ div.choose__description--container {
 
 /* Responsive Choose Section */
 @media (max-width: 1039px) {
-    .choose {
-        padding-left: 0;
-
-    }
-
-    .choose__card--container {
-        flex-direction: column;
-        width: 100%;
-
-    }
+    
+   
 
     .choose__card {
-        width: 70%;
-        margin: 0 auto;
         text-align: center;
+        width: 80%;
 
     }
 
     .choose__description--container {
-        width: 80%;
+        width: 100%;
         margin: 0 auto;
         text-align: center;
         margin-top: 70px;
+    
 
     }
 
@@ -551,14 +522,9 @@ div.choose__description--container {
 
 /* Responsive Articles */
 @media (max-width: 1039px) {
-    .articles__container {
-        flex-direction: column;
-        max-width: 100%;
-
-    }
 
     .article__card {
-        width: 70%;
+        width: 100%;
         margin: 0 auto;
         text-align: center;
         margin-bottom: 50px;
@@ -577,6 +543,7 @@ div.choose__description--container {
     }
 
 }
+
 
 /* Responsive Footer ***********/
 @media (max-width: 761px) {
